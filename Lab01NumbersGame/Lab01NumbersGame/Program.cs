@@ -44,5 +44,18 @@ namespace Lab01NumbersGame
                 Console.WriteLine(oe.Message);
             }
         }
+
+        static int[] Populate(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine($"Please enter a number: {i} of {array.Length}");
+                string popString = Console.ReadLine();
+                int popNumber = Convert.ToInt32(popString);
+                array[i] = popNumber;
+            }
+
+            return array;
+        }
     }
 }
