@@ -6,7 +6,20 @@ namespace Lab01NumbersGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to my game! Let's do some math!");
+
+            try
+            {
+                //StartSequence();
+            }
+            catch (Exception ge)
+            {
+                Console.WriteLine("It looks like you have run into an issue: " + ge.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Program is complete.");
+            }
         }
     }
 }
