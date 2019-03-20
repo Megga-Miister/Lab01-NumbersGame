@@ -21,5 +21,28 @@ namespace Lab01NumbersGame
                 Console.WriteLine("Program is complete.");
             }
         }
+
+        static void StartSequence()
+        {
+            Console.WriteLine("Enter a number greater than zero");
+            string givenString = Console.ReadLine();
+            int givenNumber = Convert.ToInt32(givenString);
+
+            int[] userArray = new int[givenNumber];
+
+            try
+            {
+                //Populate(userArray);
+                //GetQuotient(GetProduct(userArray, GetSum(userArray)));
+            }
+            catch (FormatException fe)
+            {
+                Console.WriteLine(fe.Message);
+            }
+            catch (OverflowException oe)
+            {
+                Console.WriteLine(oe.Message);
+            }
+        }
     }
 }
