@@ -75,5 +75,23 @@ namespace Lab01NumbersGame
 
             return sum;
         }
+
+        static int GetProduct(int[] array, int sum)
+        {
+            Console.WriteLine($"Please select a random number between 1 and {array.Length}");
+            string indexString = Console.ReadLine();
+            int indexNumber = Convert.ToInt32(indexString);
+
+            try
+            {
+                int product = sum * indexNumber;
+                return product;
+            }
+            catch(IndexOutOfRangeException ie)
+            {
+                Console.WriteLine(ie.Message);
+                throw;
+            }
+        }
     }
 }
