@@ -19,6 +19,7 @@ namespace Lab01NumbersGame
             finally
             {
                 Console.WriteLine("Program is complete.");
+                Console.ReadKey();
             }
         }
 
@@ -56,6 +57,23 @@ namespace Lab01NumbersGame
             }
 
             return array;
+        }
+
+        static int GetSum(int[] array)
+        {
+            int sum = 0;
+
+            foreach (int number in array)
+            {
+                sum += number;
+            }
+
+            if (sum < 20)
+            {
+                throw (new Exception($"Value of {sum} is too low."));
+            }
+
+            return sum;
         }
     }
 }
