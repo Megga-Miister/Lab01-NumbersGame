@@ -93,5 +93,25 @@ namespace Lab01NumbersGame
                 throw;
             }
         }
+
+        static decimal GetQuotient(int product)
+        {
+            Console.WriteLine($"Please enter a number to divide your product {product} by");
+            string divString = Console.ReadLine();
+            int divNumber = Convert.ToInt32(divString);
+
+            try
+            {
+                decimal quotient = decimal.Divide(product, divNumber);
+                int result = Convert.ToInt32(quotient);
+                return quotient;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("You cannot divide by zero");
+                return 0;
+            }
+            
+        }
     }
 }
