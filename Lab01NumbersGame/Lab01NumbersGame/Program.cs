@@ -23,6 +23,9 @@ namespace Lab01NumbersGame
             }
         }
 
+        /// <summary>
+        /// Instantiates an array. Calls multiple methods and instatiates variables to capture their outputs to console. Handles format and overflow exceptions.
+        /// </summary>
         static void StartSequence()
         {
             Console.WriteLine("Enter a number greater than zero");
@@ -55,6 +58,11 @@ namespace Lab01NumbersGame
             }
         }
 
+        /// <summary>
+        /// Fills a previously instatiated array with converted user inputs.
+        /// </summary>
+        /// <param name="array">Empty integer array</param>
+        /// <returns>Filled integer array</returns>
         static int[] Populate(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
@@ -68,6 +76,11 @@ namespace Lab01NumbersGame
             return array;
         }
 
+        /// <summary>
+        /// Calculate the sum of every integer in a given array
+        /// </summary>
+        /// <param name="array">Populated integer array</param>
+        /// <returns>Sum of integer array</returns>
         static int GetSum(int[] array)
         {
             int sum = 0;
@@ -85,6 +98,12 @@ namespace Lab01NumbersGame
             return sum;
         }
 
+        /// <summary>
+        /// Takes a given integer array and finds value of variable at given index provided by user. Then multiples that value to the given sum.
+        /// </summary>
+        /// <param name="array">Populated integer array</param>
+        /// <param name="sum">Integer returned from GetSum method</param>
+        /// <returns>Product of given sum and value of variable in given index</returns>
         static int GetProduct(int[] array, int sum)
         {
             Console.WriteLine($"Please select a random number between 1 and {array.Length}");
@@ -103,6 +122,11 @@ namespace Lab01NumbersGame
             }
         }
 
+        /// <summary>
+        /// Takes in an integer and divids it by user provided integer. Then outputs quotient. Handles a divide by zero exception.
+        /// </summary>
+        /// <param name="product">Integer returned from the GetProduct method</param>
+        /// <returns>Quotient of given product and user provided number</returns>
         static decimal GetQuotient(int product)
         {
             Console.WriteLine($"Please enter a number to divide your product {product} by");
