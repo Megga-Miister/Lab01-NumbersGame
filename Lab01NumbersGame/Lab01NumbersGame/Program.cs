@@ -10,7 +10,7 @@ namespace Lab01NumbersGame
 
             try
             {
-                //StartSequence();
+                StartSequence();
             }
             catch (Exception ge)
             {
@@ -33,8 +33,17 @@ namespace Lab01NumbersGame
 
             try
             {
-                //Populate(userArray);
-                //GetQuotient(GetProduct(userArray, GetSum(userArray)));
+                int[] array = Populate(userArray);
+                int sum = GetSum(userArray);
+                int product = GetProduct(userArray, sum);
+                decimal quotient = GetQuotient(product);
+
+                Console.WriteLine($"Your array is size: {givenNumber}");
+                Console.WriteLine($"The numbers in the array are {String.Join(", ", array)}");
+                Console.WriteLine($"The sum of the array is {sum}");
+                Console.WriteLine($"{sum} * {product/sum} = {product}");
+                Console.WriteLine($"{product} / {product/quotient} = {quotient}");
+
             }
             catch (FormatException fe)
             {
@@ -50,7 +59,7 @@ namespace Lab01NumbersGame
         {
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine($"Please enter a number: {i} of {array.Length}");
+                Console.WriteLine($"Please enter a number: {i + 1} of {array.Length}");
                 string popString = Console.ReadLine();
                 int popNumber = Convert.ToInt32(popString);
                 array[i] = popNumber;
@@ -84,7 +93,7 @@ namespace Lab01NumbersGame
 
             try
             {
-                int product = sum * indexNumber;
+                int product = sum * array[indexNumber - 1];
                 return product;
             }
             catch(IndexOutOfRangeException ie)
