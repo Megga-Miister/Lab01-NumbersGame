@@ -20,7 +20,7 @@ Then select and open Lab01NumbersGame.sln
 ####Visuals
 
 Application Run Through Examples
-![Sample Play Through of Game](\Assets\ExampleRunThrough.JPG)
+![Sample Play Through of Game](Assets/ExampleRunThrough.JPG)
 
 
 Change Log
